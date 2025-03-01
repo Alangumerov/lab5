@@ -92,3 +92,27 @@ def function(string):
 string="HelloHowAreYou"
 result=function(string)
 print(result)
+
+
+9)
+import re
+def function(string):
+    patterns=r'([a-z])([A-Z])'
+    matches=re.sub(patterns, r'\1 \2',string )
+    return matches
+string="HelloHowAreYou"
+result=function(string)
+print(result)
+
+
+10)
+import re
+def function(string):
+    patterns=r'([a-z])([A-Z])'
+    matches=re.sub(patterns, r'\1_\2',string )
+    matches=matches.lower()
+    matches=matches.capitalize()
+    return matches
+string="HelloHowAreYou"
+result=function(string)
+print(result)
